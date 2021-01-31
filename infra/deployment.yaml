@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pvc
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      run: pvc
+  template:
+    metadata:
+      labels:
+        run: pvc
+    spec:
+      containers:
+      - image: hazebooth/profile_view_counter:0.0.3
+        imagePullPolicy: IfNotPresent
+        name: pvc
+        ports:
+        - containerPort: 3030
+          protocol: TCP

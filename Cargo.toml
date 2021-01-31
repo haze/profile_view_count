@@ -1,0 +1,13 @@
+[package]
+name = "profile_view_count"
+version = "0.1.0"
+authors = ["Haze Booth <isnt@haze.cool>"]
+edition = "2018"
+
+[dependencies]
+argh = "0.1.4"
+http = "0.2.3"
+rand = "0.8.3"
+serde = { version = "1.0.123", features = ["derive"] }
+tokio = { version = "1.0.2", features = ["macros", "rt-multi-thread"] }
+warp = "0.3.0"
